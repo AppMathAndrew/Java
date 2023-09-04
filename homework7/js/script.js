@@ -1,47 +1,63 @@
-// замикання
+// class CircleBox {
+//   constructor(selector) {
+//     this.$el = document.querySelector(selector);
+//   }
 
-// function addNewUrl(domain) {
-//     return function (url) {
-//         return `https://${url}.${domain}`;
-//     }
-// };
+//   hide() {
+//     this.$el.style.display = "none";
+//   }
 
-// const tldurl = addNewUrl("com");
-
-// console.log(tldurl("xpertwrker"));
-
-
-// function changeLook() {
-//     this.style.background = "red";
-//     this.style.borderBottom = "2px solid red";
-//     this.style.color = "green";
+//   show() {
+//     this.$el.style.display = "block";
+//   }
 // }
 
-// let user = document.querySelectorAll('div');
+// class CircleItem extends CircleBox {
+//   constructor(options) {
+//     super(options.selector);
+//     this.$el.style.width = options.size + "px";
+//     this.$el.style.height = options.size + "px";
+//     this.$el.style.borderRadius = "50%";
+//     this.$el.style.background = options.color;
+//   }
+// }
 
-// user.forEach(function (element) {
-//     element.onclick = changeLook;
-// })
+// const CircleRed = new CircleItem({
+//   selector: "#circleRed",
+//   color: "red",
+//   size: 50,
+// });
 
-// const userInfo = {
-//     name: "name",
-//     age: "age",
-//     clientInformation: function (job, hobby) {
-//         console.group(`${name} info:`);
-//         console.log(`Name is ${this.name}`);
-//         console.log(`Age is ${this.age}`);
-//         console.log(`His job is ${job}`);
-//         console.log(`He has ${hobby} hobby`);
-//         console.groupEnd;
+// const CircleYellow = new CircleItem({
+//   selector: "#circleYellow",
+//   color: "yellow",
+//   size: 70,
+// });
+
+// const CircleGreen = new CircleItem({
+//   selector: "#circleGreen",
+//   color: "green",
+//   size: 90,
+// });
+
+// function Car (name, color, speed, checkIn){
+//     this.name = name;
+//     this.color = color;
+//     this.speed = speed;
+//     this.checkIn = checkIn;
+// }
+
+// Car.prototype.message = function () {
+//     console.log(`the ${this.name} car is ${this.color} and it's speed - ${this.speed}!`);
+// };
+
+// Car.prototype.check = function () {
+//     if (this.checkIn == true) {
+//         alert(`the ${this.name} car must go to the service station`);
+//     } else {
+//         console.log(`Have a nice ride!`)
 //     }
 // };
 
-// const Andrew = {
-//     name: "Andrew",
-//     age: 19,
-// };
-
-// userInfo.clientInformation.call(Andrew, "developer", "cycling");
-// userInfo.clientInformation.bind(Andrew, "developer", "cycling")();
-// userInfo.clientInformation.apply(Andrew, ["developer", "cycling"]);
+// const BMW = new Car("bmw", "black", 300, true);
 
